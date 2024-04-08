@@ -26,5 +26,4 @@ urlpatterns = [
     path('update-product-enter/<str:code>/', views.update_product_enter,name='update_product_enter'),
     path('detail-product-enter/<str:code>/', views.detail_product_enter,name='detail_product_enter'),
     path('product-history/<str:code>/', views.product_history,name='product_history'),
-
 ]

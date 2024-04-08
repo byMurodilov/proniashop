@@ -4,6 +4,19 @@ from main import models
 from itertools import chain
 from django.db.models import Q
 from datetime import datetime
+# from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
+
+# def paginator_page(List, num, request):
+#     paginator = Paginator(List, num)
+#     pages = request.GET.get('page')
+#     try:
+#         list =paginator.page(pages)
+#     except PageNotAnInteger:
+#         list = paginator.page(1)
+#     except EmptyPage:
+#         list = paginator.page(paginator.num_pages)
+#     return list
 
 
 @staff_required
@@ -231,4 +244,3 @@ def product_history(request,code):
     data = sorted(data, key=lambda x: x.date, reverse=True)
     context = {'queryset':queryset}
     return render(request, 'dashboard/enter_product/history.html', context)
-

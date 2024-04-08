@@ -2,9 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from random import sample
 import string
-import os
 from datetime import datetime
-from django.conf import settings
+
 
 
 class CodeGenerate(models.Model):

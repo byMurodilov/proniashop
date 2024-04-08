@@ -16,7 +16,7 @@
                                             <h2 class="title">Pronia Company</h2>
                                             <p class="short-desc">Pronia, 100% toza va halol mahsulot va buyumlarni bizdan harid qiling!</p>
                                             <div class="btn-wrap">
-                                                <a class="btn btn-custom-size xl-size btn-pronia-primary" href="shop.html">Hozir kashf qiling</a>
+                                                <a class="btn btn-custom-size xl-size btn-pronia-primary" href="#">Hozir kashf qiling</a>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                             <h2 class="title">Pronia Company</h2>
                                             <p class="short-desc">Pronia, 100% tabiiy, organik va o'simliklar do'koni bilan.</p>
                                             <div class="btn-wrap">
-                                                <a class="btn btn-custom-size xl-size btn-pronia-primary" href="shop.html">Hozir kashf qiling</a>
+                                                <a class="btn btn-custom-size xl-size btn-pronia-primary" href="#">Hozir kashf qiling</a>
                                             </div>
                                         </div>
                                     </div>
@@ -411,48 +411,6 @@
                                                                 <a href="{% url 'front:product_detail' product.code %}">
                                                                     <img class="primary-img" src="{{product.new_img.url}}" alt="Product Images" >
                                                                 </a>
-                                                                {% if user.is_authenticated %}
-                                                                <div class="product-add-action">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="{% url 'front:add_wishlist' product.code %}" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                                                {% if product.is_like %}
-                                                                                <i class="fa fa-heart" style="color: red;"></i>
-                                                                                {% else %}
-                                                                                <i class="fa fa-heart-o"></i>
-                                                                                {% endif %}
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="quuickview-btn">
-                                                                            <a href="{% url 'front:product_detail' product.code %}">
-                                                                                <i class="pe-7s-look"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="quuickview-btn">
-                                                                            <a href="{% url 'front:add_to_cart' product.code %}">
-                                                                                <i class="pe-7s-cart"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>                                                  
-                                                                {% endif %}
-                                                            </div>
-                                                            <div class="product-content">
-                                                                <a class="product-name" href="{% url 'front:product_detail' product.code %}">{{ product.name }}</a>
-                                                                <div class="price-box pb-1">
-                                                                    <span class="new-price">{{ product.price }} sum</span>
-                                                                </div>
-                                                                <div class="rating-box">
-                                                                    <ul>
-                                                                        {% for i in rating %}
-                                                                        {% if i <= mark %}
-                                                                        <li><i class="fa fa-star"></i></li>                                      
-                                                                        {% else %}
-                                                                        <li><i class="fa fa-star-o"></i></li>                                      
-                                                                        {% endif %}
-                                                                        {% endfor %}
-                                                                    </ul>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

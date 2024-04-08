@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from main import models
+import qrcode
+from PIL import Image
+from io import BytesIO
+import base64
 
 
 def index(request):
@@ -161,3 +165,4 @@ def order_list(request):
         'returned':returned,
         }
     return render(request, 'front/order/list.html',context)
+
